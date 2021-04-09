@@ -4,11 +4,16 @@
     list-style: none;
     
 }
-
+.overview{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 nav{
     width: 100%;
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 0 0 0;
     
 }
 .info{
@@ -27,28 +32,55 @@ nav{
 .info a:hover{
     color: #e0e5e8;
 }
-.title{
-    padding-top: 10px ;
-    font-family: 'Nanum Gothic', sans-serif;
-    margin: 0;
-}
-header{
-    width: 100%;
-    display:block;
+
+.dropbtn {
+    background-color: #fff;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
     position: relative;
-   
-}
-.bg_img{
+    display: none;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: lightgray;
+  }
+  header{
     width: 100%;
-    height: auto;
-    padding-bottom: 70px;
+    background-image: url(./image/bg4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 .content{
-   position: absolute;
-   top: 250px;
-   left: 150px;
-   max-width: 550px;
-   width: 100%;
+    padding: 200px 0 200px 78px  
 }
 .content h1{
     text-transform: uppercase;
@@ -77,17 +109,19 @@ header{
 }
 .btt-text{
     text-transform: uppercase;
+    margin-left: 5px;
 }
 .body{
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-top: 70px;
+
 }
 .bestSeller {
     display: flex;
     flex-direction: column;
+    padding-top: 70px;
    
 }
 .bestSeller h2, .follow h2{
@@ -99,14 +133,16 @@ header{
     padding-bottom: 30px;
 }
 .sellerProduct{
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
-    
+    padding: 0 135px;
+
 }
 .products{
-    width: 330px;
+    max-width: 30%;
     margin-right: 30px;
+    display: inline-block;
 }
 .products:last-child{
     margin-right: 0;
@@ -120,7 +156,7 @@ header{
 }
 .products img{
    width: 100%;
-   height: 350px;  
+   height: 350px;
 }
 .products a:hover {
     transform: scale(1.05);
@@ -136,7 +172,6 @@ header{
     margin: 15px auto 0;
 }
 .showMore{
-    width: 150px;
     padding: 10px 20px ;
     margin: 0 auto;
     background-color: #fff;
@@ -148,23 +183,22 @@ header{
 .showMore::after{
     content: "";
     position: absolute;
-    width: 450px;
     left: 100%;
     top: 50%;
-    height: 1px;
+    width: 100%;
+    height: 1px ;
     background-color: #777;
 }
 .showMore::before{
     content: "";
     position: absolute;
-    width: 450px;
     right: 100%;
     top: 50%;
-    height: 1px;
+    width: 100%;
+    height: 1px ;
     background-color: #777;
 }
 .follow{
-    width: 100%;
     margin-top: 70px;
     display: flex;
     justify-content: center;
@@ -182,22 +216,24 @@ header{
 .moreBites{
     display: flex;
     flex-direction: column;
-    width: 900px;
     height: auto;
     padding-top: 70px;
     z-index: 1;
+    max-width: 100%;
 }
 
 .grid-container {
-    width: 900px;
+    max-width: 100%;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: auto auto auto;
     margin: 30px auto;
+    padding: 20px;
    
 }
 .grid-item{
-    width: 290px;
+    max-width: 290px;
+    width: 100%;
     height: 280px;
     transition: all ease-in-out 1.5s;
 }
@@ -210,9 +246,9 @@ header{
 }
 .ship{
     display: flex;
-    width: 900px;
     position: relative;
     margin-bottom:40px;
+    width: 900px;
 }
 .general{
     display: flex;
@@ -240,7 +276,7 @@ header{
     position: absolute;
     top: -15px;
     left: 65%;
-    height: 200px;
+    height: 180px;
     width: 1px;
     background-color: #555;
 }
@@ -249,7 +285,7 @@ header{
     position: absolute;
     top: -15px;
     right: auto;
-    height: 200px;
+    height: 180px;
     width: 1px;
     background-color: #555;
 }
@@ -324,4 +360,37 @@ form{
 }
 .coppyRighter ul li a i:hover{
     color:#333;    
+}
+
+@media only screen and (max-width:1200px) {
+      
+    .products{
+        width: 32%;
+    }
+}
+/* @media only screen and (max-width:1024px) {
+      
+    .products{
+        width: 32%;
+       
+    }
+} */
+@media only screen and (max-width:768px) {
+    .info{
+        display: none;
+    }   
+    .dropdown{
+        display: block;
+    }
+    .sellerProduct{
+        display: flex;
+         justify-content: center;
+         flex-direction: column;
+         align-items: center;
+    }
+    .products{
+        display: block;
+        max-width: 80%;
+        width: 100%;
+     }
 }

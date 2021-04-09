@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./demo.css">
     <title>Bakery</title>
 </head>
 <body>
-    <nav>
+    <nav class="overview">
         <div class="info">
             <a href="#">Home</a>
             <a href="#">Shop</a>
@@ -23,17 +23,28 @@
             <a href="#">Instagram</a>
             <a href="#">Facebook</a>
             <a href="#">Youtube</a>
-            <a href="#"><i class="fa fa-shopping-bag">0</i></a>
+            <a class="cart" href="#"><i class="fa fa-shopping-bag">0</i></a>
         </div>
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa fa-list"></i></button>
+            <div class="dropdown-content">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About Me</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Youtube</a>
+            <a class="cart" href="#"><i class="fa fa-shopping-bag">0</i></a>
+            </div>
+          </div>
     </nav>
-    <header>
-        <img class="bg_img" src="./image/bg4.jpg" alt="bg-img">
-        <div class="content">
-            <h1><span class="">100% natural.</span> homemade<br/>fresh cookies.</h1>
+    <header >
+        <div class="content overview">
+            <h1 class="">100% natural.<br/> homemade<br/>fresh cookies.</h1>
             <button class="btt-text">shop now</button>
         </div>
     </header>
-    <section classs="body">
+    <section classs="body overview" >
         <article class="bestSeller">
             <h2>/ Best Seller</h2>
             <p>I'm a paragraph. Click here to add your own text and edit me</p>
@@ -78,7 +89,7 @@
 
             <div class="bgFollow"></div>
             <button class="more">Show More</button>
-            <ul class="ship">
+            <ul class="ship overview">
                 <li class="general">
                     <a class="size" href="#"><i class="fa fa-opencart"></i></a>
                     <a href="#"><h4>new pick up service</h4></a>
